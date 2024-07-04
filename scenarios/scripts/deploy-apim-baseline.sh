@@ -4,9 +4,9 @@ set -e
 
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-if [[ -f "$script_dir/../.env" ]]; then
-	echo "Loading .env"
-	source "$script_dir/../.env"
+if [[ -f "$script_dir/../sample.env" ]]; then
+	echo "Loading sample.env"
+	source "$script_dir/../sample.env"
 fi
 
 if [[ ${#AZURE_LOCATION} -eq 0 ]]; then
@@ -63,7 +63,7 @@ if [[ ${#RANDOM_IDENTIFIER} -eq 0 ]]; then
       random_char="${chars:RANDOM%${#chars}:1}"
       random_string+="$random_char"
   done
-  echo "RANDOM_IDENTIFIER='$random_string'" >> "$script_dir/../.env"
+  echo "RANDOM_IDENTIFIER='$random_string'" >> "$script_dir/../sample.env"
 else
   random_string="${RANDOM_IDENTIFIER}"
 fi

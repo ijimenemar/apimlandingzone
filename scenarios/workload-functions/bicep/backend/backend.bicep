@@ -35,7 +35,6 @@ var storageAccounts_skuName  = 'Standard_LRS'
 var storageAccounts_kind  = 'StorageV2'
 var functionContentShareName = 'func-contents'
 
-
 var storageAccounts_minTLSVersion = 'TLS1_2'
 var privateEndpoint_storageaccount_queue_Name = 'pep-sa-queue-${resourceSuffix}'
 var privateEndpoint_storageaccount_blob_Name = 'pep-sa-blob-${resourceSuffix}'
